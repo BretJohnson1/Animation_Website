@@ -20,36 +20,50 @@
       font-family: 'Black Ops One', sans-serif;
     }
   </style>
+
+<script>
+  // Ensure form submission triggers the modal
+  document.getElementById('contactForm').addEventListener('submit', function(event) {
+    event.preventDefault(); // Prevent page refresh or default form behavior
+    console.log('Form submitted, showing modal...'); // Debugging log
+    $('#thankYouModal').modal('show'); // Show the Bootstrap modal
+  });
+</script>
+
+
   <style>
-    .video-banner {
-      position: relative;
-      height: 100vh;
-      overflow: hidden;
-    }
+.video-banner {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
 
-    .video-banner video {
-      object-fit: cover;
-      width: 100%;
-      height: 100%;
-    }
+.video-banner video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
 
-    .video-overlay {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background-color: rgba(0, 0, 0, 0.5); /* Dark overlay for contrast */
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
+.video-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; /* Move the h1 to the top */
+  padding-top: 80px; /* Adjust space from the top */
+  color: #4169E1; /* Royal Blue color */
+}
 
-    .video-overlay h1 {
-      color: white;
-      font-size: 3rem;
-      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
-    }
+.video-overlay h1 {
+  font-size: 4.5rem; /* Increase font size by 6 (default is around 3rem) */
+  font-family: 'Black Ops One', sans-serif; /* Apply the Black Ops One font */
+  text-align: center;
+  margin: 0;
+}
 
     .scroll-box {
   height: 300px; /* Set the height of the scrollable area */
@@ -59,6 +73,13 @@
   border: 1px solid #4169e1; /* Optional: royal blue border for aesthetics */
   padding: 15px; /* Space inside the box */
   border-radius: 5px; /* Rounded corners for a smooth look */
+}
+
+/* Hover effect for FAQ question text */
+.faq-item h5:hover {
+  color: #5A9BCF; /* Lighter blue color */
+  font-size: 0.95em; /* Slightly smaller text */
+  transition: all 0.3s ease; /* Smooth transition for the effect */
 }
 
   </style>
@@ -95,7 +116,7 @@
 <!-- Hero Banner -->
 <section class="video-banner">
   <video autoplay muted loop playsinline>
-    <source src="Assets/Videos/videoplayback.mp4" type="video/mp4">
+    <source src="Assets/Videos/videoplayback.mp4" type="video/mp4" loading="lazy">
     Your browser does not support the video tag.
   </video>
   <div class="video-overlay">
@@ -113,7 +134,7 @@
         <div class="carousel-item active">
           <div class="card" style="background-color: #2a3439; color: #4169e1;">
             <div class="card-img-container d-flex align-items-center justify-content-center" style="height: 200px; overflow: hidden;">
-              <img class="img-fluid" src="Assets/Videos/Images/Understanding-Animation-Basics.webp" alt="2D Animation">
+              <img class="img-fluid" src="Assets/Videos/Images/Understanding-Animation-Basics.webp" alt="2D Animation" loading="lazy">
             </div>
             <div class="card-body text-primary">
               <h5 class="card-title">2D Animation</h5>
@@ -125,7 +146,7 @@
         <div class="carousel-item">
           <div class="card" style="background-color: #2a3439; color: #4169e1;">
             <div class="card-img-container d-flex align-items-center justify-content-center" style="height: 200px; overflow: hidden;">
-              <img class="img-fluid" src="Assets/Videos/Images/video-game-in-landscape.webp" alt="3D Modeling">
+              <img class="img-fluid" src="Assets/Videos/Images/video-game-in-landscape.webp" loading="lazy" alt="3D Modeling">
             </div>
             <div class="card-body text-primary">
               <h5 class="card-title">3D Modeling</h5>
@@ -137,7 +158,7 @@
         <div class="carousel-item">
           <div class="card" style="background-color: #2a3439; color: #4169e1;">
             <div class="card-img-container d-flex align-items-center justify-content-center" style="height: 200px; overflow: hidden;">
-              <img class="img-fluid" src="Assets/Videos/Images/maxresdefault.jpg" alt="Motion Graphics">
+              <img class="img-fluid" src="Assets/Videos/Images/maxresdefault.jpg" alt="Motion Graphics" loading="lazy">
             </div>
             <div class="card-body text-primary">
               <h5 class="card-title">Motion Graphics</h5>
@@ -149,7 +170,7 @@
         <div class="carousel-item">
           <div class="card" style="background-color: #2a3439; color: #4169e1;">
             <div class="card-img-container d-flex align-items-center justify-content-center" style="height: 200px; overflow: hidden;">
-              <img class="img-fluid" src="Assets/Videos/Images/game-animation-sample-header.avif" alt="Game Animation">
+              <img class="img-fluid" src="Assets/Videos/Images/game-animation-sample-header.avif" alt="Game Animation" loading="lazy">
             </div>
             <div class="card-body text-primary">
               <h5 class="card-title">Game Animation</h5>
@@ -202,48 +223,197 @@
   <div class="container">
     <h2 class="text-center text-primary mb-4">FAQ</h2>
     <div>
-      <div class="faq-item" data-toggle="collapse" data-target="#answer1">
+
+      <!-- FAQ Item 1 -->
+      <div class="faq-item text-primary mb-3" data-toggle="collapse" data-target="#answer1">
         <h5>What is animation?</h5>
       </div>
-      <div id="answer1" class="collapse">Animation is bringing still images to life.</div>
-      <!-- Add similar items for other FAQs -->
+      <div id="answer1" class="collapse text-white mb-3">
+        Animation is bringing still images to life.
+      </div>
+
+      <!-- FAQ Item 2 -->
+      <div class="faq-item text-primary mb-3" data-toggle="collapse" data-target="#answer2">
+        <h5>What is the duration of the courses?</h5>
+      </div>
+      <div id="answer2" class="collapse text-white mb-3">
+        Our courses range from 3 months to 12 months, depending on the specialization.
+      </div>
+
+      <!-- FAQ Item 3 -->
+      <div class="faq-item text-primary mb-3" data-toggle="collapse" data-target="#answer3">
+        <h5>Do I need prior animation experience to join?</h5>
+      </div>
+      <div id="answer3" class="collapse text-white mb-3">
+        No prior experience is required. We offer beginner-friendly courses as well as advanced tracks for experienced animators.
+      </div>
+
+      <!-- FAQ Item 4 -->
+      <div class="faq-item text-primary mb-3" data-toggle="collapse" data-target="#answer4">
+        <h5>Are the courses available online?</h5>
+      </div>
+      <div id="answer4" class="collapse text-white mb-3">
+        Yes, we offer both in-person and online courses for maximum flexibility.
+      </div>
+
+      <!-- FAQ Item 5 -->
+      <div class="faq-item text-primary mb-3" data-toggle="collapse" data-target="#answer5">
+        <h5>What software will I learn during the course?</h5>
+      </div>
+      <div id="answer5" class="collapse text-white mb-3">
+        We cover industry-standard software such as Blender, Maya, Adobe Animate, and Unreal Engine.
+      </div>
+
+      <!-- FAQ Item 6 -->
+      <div class="faq-item text-primary mb-3" data-toggle="collapse" data-target="#answer6">
+        <h5>Are there any scholarships available?</h5>
+      </div>
+      <div id="answer6" class="collapse text-white mb-3">
+        Yes, we offer scholarships for underrepresented communities and exceptional students.
+      </div>
+
+      <!-- FAQ Item 7 -->
+      <div class="faq-item text-primary mb-3" data-toggle="collapse" data-target="#answer7">
+        <h5>What is the class size for the in-person courses?</h5>
+      </div>
+      <div id="answer7" class="collapse text-white mb-3">
+        Class sizes are typically between 10-20 students to ensure personalized attention.
+      </div>
+
+      <!-- FAQ Item 8 -->
+      <div class="faq-item text-primary mb-3" data-toggle="collapse" data-target="#answer8">
+        <h5>Will I receive a certificate upon completion?</h5>
+      </div>
+      <div id="answer8" class="collapse text-white mb-3">
+        Yes, all students who complete the course will receive a certificate of completion.
+      </div>
+
+      <!-- FAQ Item 9 -->
+      <div class="faq-item text-primary mb-3" data-toggle="collapse" data-target="#answer9">
+        <h5>Do you offer job placement assistance after graduation?</h5>
+      </div>
+      <div id="answer9" class="collapse text-white mb-3">
+        Yes, we provide job placement services, including resume workshops, interview preparation, and access to our industry network.
+      </div>
+
+      <!-- FAQ Item 10 -->
+      <div class="faq-item text-primary mb-3" data-toggle="collapse" data-target="#answer10">
+        <h5>Can I take multiple courses at once?</h5>
+      </div>
+      <div id="answer10" class="collapse text-white mb-3">
+        Yes, you can take multiple courses, but we recommend consulting with our advisors to manage your workload effectively.
+      </div>
+
     </div>
   </div>
 </section>
+
 
 <!-- Testimonies Section -->
 <section id="testimonies" class="py-5">
   <div class="container">
     <h2 class="text-center text-primary mb-4">Student Testimonials</h2>
-    <div class="testimonial active">
-      <p>“A1 Animations transformed my career!”</p>
-      <img src="student1.jpg" alt="Student 1">
+
+    <!-- Testimonial Carousel -->
+    <div id="testimonialCarousel" class="carousel slide carousel-fade" data-ride="carousel">
+      <div class="carousel-inner">
+
+        <!-- Testimonial 1 -->
+        <div class="carousel-item active text-center">
+          <img src="Assets/Videos/Images/Zion-Harris-0155-Professional-Headshots-Louisville-Gary-Barragan-1.jpg" loading="lazy" alt="Student 1" class="d-block mx-auto rounded-circle" width="150">
+          <p class="text-white">Clayton Hall</p>
+          <p class="text-white">“A1 Animations transformed my career!”</p>
+        </div>
+
+        <!-- Testimonial 2 -->
+        <div class="carousel-item text-center">
+          <img src="Assets/Videos/Images/mjb-2465.jpg" loading="lazy" alt="Student 2" class="d-block mx-auto rounded-circle" width="150">
+          <p class="text-white">Elise Thatcher</p>
+          <p class="text-white">“I learned so much during the course, and it helped me land my dream job at Pixar!”</p>
+        </div>
+
+        <!-- Testimonial 3 -->
+        <div class="carousel-item text-center">
+          <img src="Assets/Videos/Images/MenPortraits037a-1280x640.jpg" loading="lazy" alt="Student 3" class="d-block mx-auto rounded-circle" width="150">
+          <p class="text-white">Timothy Caldwell</p>
+          <p class="text-white">“The hands-on experience at A1 Animations is unparalleled. The instructors are top-notch!”</p>
+        </div>
+
+        <!-- Testimonial 4 -->
+        <div class="carousel-item text-center">
+          <img src="Assets/Videos/Images/JonMarkPhotography-CommercialPortfolio-WEB-1136.jpg" loading="lazy" alt="Student 4" class="d-block mx-auto rounded-circle" width="150">
+          <p class="text-white">Brenton Stacks</p>
+          <p class="text-white">“This course gave me the skills I needed to create my own animation studio!”</p>
+        </div>
+
+        <!-- Testimonial 5 -->
+        <div class="carousel-item text-center">
+          <img src="Assets/Videos/Images/headshots-800x536.jpg" loading="lazy" alt="Student 5" class="d-block mx-auto rounded-circle" width="150">
+          <p class="text-white">Mikal Soo</p>
+          <p class="text-white">“A1 Animations helped me find my true creative voice and grow as an artist.”</p>
+        </div>
+
+        <!-- Testimonial 6 -->
+        <div class="carousel-item text-center">
+          <img src="Assets/Videos/Images/6_20200723104642_17527021_large.jpg" loading="lazy" alt="Student 6" class="d-block mx-auto rounded-circle" width="150">
+          <p class="text-white">Amber Hart</p>
+          <p class="text-white">“The course prepared me for real-world animation projects, and I couldn't be more grateful!”</p>
+        </div>
+      </div>
+
+      <!-- Carousel Controls -->
+      <a class="carousel-control-prev" href="#testimonialCarousel" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next" href="#testimonialCarousel" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
     </div>
-    <!-- Add other testimonials with fading transitions -->
   </div>
 </section>
 
+
 <!-- Contact Us Section -->
-<section id="contact" class="py-5">
+<section id="contact" class="py-5 text-white">
   <div class="container">
     <h2 class="text-center text-primary mb-4">Contact Us</h2>
-    <form>
+    <form id="contactForm">
       <div class="form-group">
         <label for="name">Name</label>
-        <input type="text" class="form-control" id="name" placeholder="Your Name">
+        <input type="text" class="form-control" id="name" placeholder="Enter your name" required>
       </div>
       <div class="form-group">
         <label for="email">Email</label>
-        <input type="email" class="form-control" id="email" placeholder="Your Email">
+        <input type="email" class="form-control" id="email" placeholder="Enter your email" required>
       </div>
       <div class="form-group">
         <label for="message">Message</label>
-        <textarea class="form-control" id="message" rows="3" placeholder="Your Message"></textarea>
+        <textarea class="form-control" id="message" rows="3" placeholder="Enter your message" required></textarea>
       </div>
       <button type="submit" class="btn btn-primary">Submit</button>
     </form>
   </div>
 </section>
+
+<!-- Thank You Modal -->
+<div class="modal fade" id="thankYouModal" tabindex="-1" role="dialog" aria-labelledby="thankYouModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header bg-primary text-white">
+        <h5 class="modal-title" id="thankYouModalLabel">Messege Recieved!</h5>
+      </div>
+      <div class="modal-body" style="color: black;">
+        <p>Thank you for reaching out! We'll have one of our administrators review your message and get back with you soon!</p>
+        <p>- A1 Administration Team</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
 
 <!-- Footer -->
 <footer class="bg-dark text-center text-white py-3">
@@ -255,5 +425,12 @@
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@1.16.1/dist/umd/popper.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script>
+  document.getElementById('contactForm').addEventListener('submit', function(event) {
+    event.preventDefault(); // Prevent default form behavior
+    console.log('Form submitted, showing modal...');
+    $('#thankYouModal').modal('show'); // Show the modal
+  });
+</script>
 </body>
 </html>
