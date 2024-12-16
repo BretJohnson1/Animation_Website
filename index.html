@@ -4,9 +4,23 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>A1 Animations</title>
+  <link href="https://fonts.googleapis.com/css2?family=Black+Ops+One&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
   <style>
-    /* Minimal custom CSS */
+    body {
+    background-color: #2a3439;
+    color: #fff;
+    }
+
+    section {
+      background-color: #2a3439 !important;
+    }
+
+    h1, h2 {
+      font-family: 'Black Ops One', sans-serif;
+    }
+  </style>
+  <style>
     .video-banner {
       position: relative;
       height: 100vh;
@@ -36,12 +50,23 @@
       font-size: 3rem;
       text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
     }
+
+    .scroll-box {
+  height: 300px; /* Set the height of the scrollable area */
+  overflow-y: scroll; /* Enables vertical scrolling */
+  background-color: #2a3439; /* Gunmetal gray background */
+  color: #4169e1; /* Text color for readability */
+  border: 1px solid #4169e1; /* Optional: royal blue border for aesthetics */
+  padding: 15px; /* Space inside the box */
+  border-radius: 5px; /* Rounded corners for a smooth look */
+}
+
   </style>
 </head>
 <body>
 
 <!-- Navbar -->
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top" style="background-color: #2a3439;>
   <a class="navbar-brand" href="#"></a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -49,19 +74,19 @@
   <div class="collapse navbar-collapse" id="navbarNav">
     <ul class="navbar-nav ml-auto">
       <li class="nav-item">
-        <a class="nav-link" href="#courses">Courses</a>
+        <a class="nav-link text-primary" href="#courses" >Courses</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#about">About Us</a>
+        <a class="nav-link text-primary" href="#about">About Us</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#faq">FAQ</a>
+        <a class="nav-link text-primary" href="#faq">FAQ</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#testimonies">Testimonies</a>
+        <a class="nav-link text-primary" href="#testimonies">Testimonies</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#contact">Contact Us</a>
+        <a class="nav-link text-primary" href="#contact">Contact Us</a>
       </li>
     </ul>
   </div>
@@ -79,42 +104,54 @@
 </section>
 
 <!-- Courses Section -->
-<section id="courses" class="py-5 bg-light">
+<section id="courses" class="py-5" style="background-color: #2a3439; padding: 20px;">
   <div class="container">
-    <h2 class="text-center text-primary mb-4">Open Enrollment</h2>
+    <h2 class="text-center text-primary mb-4">Our Courses</h2>
     <div id="coursesCarousel" class="carousel slide" data-ride="carousel">
-      <div class="carousel-inner">
+      <div class="carousel-inner" style="background-color: #2a3439; padding: 20px;">
+        <!-- Course 1 -->
         <div class="carousel-item active">
-          <div class="card">
-            <img class="card-img-top" src="Assets/images/Understanding-Animation-Basics.webp" alt="Course 1">
-            <div class="card-body">
+          <div class="card" style="background-color: #2a3439; color: #4169e1;">
+            <div class="card-img-container d-flex align-items-center justify-content-center" style="height: 200px; overflow: hidden;">
+              <img class="img-fluid" src="Assets/Videos/Images/Understanding-Animation-Basics.webp" alt="2D Animation">
+            </div>
+            <div class="card-body text-primary">
               <h5 class="card-title">2D Animation</h5>
               <p class="card-text">Learn the art of traditional 2D animation and storytelling.</p>
             </div>
           </div>
         </div>
+        <!-- Course 2 -->
         <div class="carousel-item">
-          <div class="card">
-            <img class="card-img-top" src="Assets/Images/video-game-in-landscape.webp" alt="Course 2">
-            <div class="card-body">
+          <div class="card" style="background-color: #2a3439; color: #4169e1;">
+            <div class="card-img-container d-flex align-items-center justify-content-center" style="height: 200px; overflow: hidden;">
+              <img class="img-fluid" src="Assets/Videos/Images/video-game-in-landscape.webp" alt="3D Modeling">
+            </div>
+            <div class="card-body text-primary">
               <h5 class="card-title">3D Modeling</h5>
               <p class="card-text">Master the skills of 3D animation and character rigging.</p>
             </div>
           </div>
         </div>
+        <!-- Course 3 -->
         <div class="carousel-item">
-          <div class="card">
-            <img class="card-img-top" src="Assets/Images/maxresdefault.jpg" alt="Course 3">
-            <div class="card-body">
+          <div class="card" style="background-color: #2a3439; color: #4169e1;">
+            <div class="card-img-container d-flex align-items-center justify-content-center" style="height: 200px; overflow: hidden;">
+              <img class="img-fluid" src="Assets/Videos/Images/maxresdefault.jpg" alt="Motion Graphics">
+            </div>
+            <div class="card-body text-primary">
               <h5 class="card-title">Motion Graphics</h5>
               <p class="card-text">Design eye-catching motion graphics and animations.</p>
             </div>
           </div>
         </div>
+        <!-- Course 4 -->
         <div class="carousel-item">
-          <div class="card">
-            <img class="card-img-top" src="Assets/Images/game-animation-sample-header.avif" alt="Course 4">
-            <div class="card-body">
+          <div class="card" style="background-color: #2a3439; color: #4169e1;">
+            <div class="card-img-container d-flex align-items-center justify-content-center" style="height: 200px; overflow: hidden;">
+              <img class="img-fluid" src="Assets/Videos/Images/game-animation-sample-header.avif" alt="Game Animation">
+            </div>
+            <div class="card-body text-primary">
               <h5 class="card-title">Game Animation</h5>
               <p class="card-text">Bring video game characters and worlds to life.</p>
             </div>
@@ -133,20 +170,35 @@
   </div>
 </section>
 
+
 <!-- About Us Section -->
 <section id="about" class="py-5">
   <div class="container">
     <h2 class="text-center text-primary mb-4">Our Story</h2>
-    <div class="scroll-box">
+    <div class="scroll-box bg-light p-4 rounded">
       <p>
-        A1 Animations has been at the forefront of animation education since 1992. With decades of experience, we offer world-class training in all forms of animation.
+        Founded in 1992, A1 Animations began as a small collective of passionate artists who shared a love for bringing stories to life through motion. Originally operating out of a modest studio in a converted warehouse, the founders were pioneers in experimenting with both traditional hand-drawn animation and the emerging field of computer-generated imagery. Their first major project, Tales of the Midnight Sky, a short animated film, won accolades for its groundbreaking blend of 2D and 3D animation, setting the stage for the studio’s reputation for innovation.</p>
+
+<p>Over the years, A1 Animations expanded its horizons, attracting top talent from around the globe. By the mid-2000s, the studio had transitioned fully into digital animation, becoming a leader in creating high-quality animations for video games, films, and television. Their collaborations with major studios and indie developers alike solidified their place as industry leaders, with blockbuster hits such as Galactic Guardians: Uprising and The Legend of Aurion to their name. Despite their success, the company remained steadfast in nurturing creativity, priding itself on being an incubator for young talent.</p>
+
+<p>In 2010, the studio made a bold move to focus on education alongside production, launching its first animation course under the brand A1 Academy. Recognizing a gap in the market for comprehensive, hands-on training, the team designed courses that taught not only technical skills like rigging, modeling, and texturing but also the art of storytelling, character design, and emotional impact. These programs quickly gained accreditation and recognition, producing graduates who went on to work for major players like Pixar, Ubisoft, and Disney.</p>
+
+<p>The studio’s headquarters, now a state-of-the-art facility with motion-capture labs and VR-enabled classrooms, serves as both a creative space and a training ground for the next generation of animators. A1 Animations has also embraced cutting-edge technology, integrating AI-assisted animation workflows and virtual production techniques into their curriculum and projects. The result is a unique blend of artistry and technology, where students and professionals collaborate on real-world projects, learning by doing.</p>
+
+<p>One of the company’s core values is accessibility, and they offer scholarships to underrepresented communities, ensuring that anyone with a dream of animation can have a place in their program. Over the last decade, they’ve trained thousands of animators, some of whom have returned to teach or collaborate on new projects, creating a vibrant and supportive alumni network. To date, A1 Animations has expanded its educational offerings to include online courses, making their expertise available to aspiring animators worldwide.</p>
+
+<p>A1 Animations remains dedicated to pushing the boundaries of what animation can achieve. Their recent project, Chronicles of the Aether, a fully interactive animated series, has been hailed as a masterpiece for seamlessly blending traditional storytelling with audience-driven choices. Meanwhile, their educational arm continues to grow, offering specialized tracks in everything from creature design to real-time animation for Unreal Engine.</p>
+
+<p>What sets A1 Animations apart is its unwavering belief that animation is more than just a visual medium—it’s a way to connect, inspire, and transform. Every frame they create, whether for clients or as part of their courses, carries a piece of their rich history and dedication to the craft. From humble beginnings to global acclaim, A1 Animations has stayed true to its mission: to empower artists and tell stories that move the world.</p>
+
+<p>Today, the studio stands as a beacon for aspiring animators, a hub of cutting-edge technology, and a trusted partner for some of the entertainment industry’s biggest names. Whether producing a blockbuster animated feature or mentoring a new student, A1 Animations never loses sight of its roots: a small team of dreamers determined to animate the impossible. With over three decades of excellence and innovation under its belt, the company looks forward to inspiring the next generation of storytellers, creators, and visionaries.</p>
       </p>
     </div>
   </div>
 </section>
 
 <!-- FAQ Section -->
-<section id="faq" class="py-5 bg-light">
+<section id="faq" class="py-5">
   <div class="container">
     <h2 class="text-center text-primary mb-4">FAQ</h2>
     <div>
@@ -172,7 +224,7 @@
 </section>
 
 <!-- Contact Us Section -->
-<section id="contact" class="py-5 bg-light">
+<section id="contact" class="py-5">
   <div class="container">
     <h2 class="text-center text-primary mb-4">Contact Us</h2>
     <form>
