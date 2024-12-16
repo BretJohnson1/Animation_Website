@@ -24,9 +24,9 @@
 <script>
   // Ensure form submission triggers the modal
   document.getElementById('contactForm').addEventListener('submit', function(event) {
-    event.preventDefault(); // Prevent page refresh or default form behavior
-    console.log('Form submitted, showing modal...'); // Debugging log
-    $('#thankYouModal').modal('show'); // Show the Bootstrap modal
+    event.preventDefault();
+    console.log('Form submitted, showing modal...');
+    $('#thankYouModal').modal('show');
   });
 </script>
 
@@ -53,33 +53,33 @@
   height: 100%;
   display: flex;
   justify-content: center;
-  align-items: flex-start; /* Move the h1 to the top */
-  padding-top: 80px; /* Adjust space from the top */
-  color: #4169E1; /* Royal Blue color */
+  align-items: flex-start;
+  padding-top: 80px;
+  color: #4169E1;
 }
 
 .video-overlay h1 {
-  font-size: 4.5rem; /* Increase font size by 6 (default is around 3rem) */
-  font-family: 'Black Ops One', sans-serif; /* Apply the Black Ops One font */
+  font-size: 4.5rem;
+  font-family: 'Black Ops One', sans-serif;
   text-align: center;
   margin: 0;
 }
 
     .scroll-box {
-  height: 300px; /* Set the height of the scrollable area */
-  overflow-y: scroll; /* Enables vertical scrolling */
-  background-color: #2a3439; /* Gunmetal gray background */
-  color: #4169e1; /* Text color for readability */
-  border: 1px solid #4169e1; /* Optional: royal blue border for aesthetics */
-  padding: 15px; /* Space inside the box */
-  border-radius: 5px; /* Rounded corners for a smooth look */
+  height: 300px;
+  overflow-y: scroll;
+  background-color: #2a3439;
+  color: #4169e1;
+  border: 1px solid #4169e1;
+  padding: 15px;
+  border-radius: 5px;
 }
 
 /* Hover effect for FAQ question text */
 .faq-item h5:hover {
-  color: #5A9BCF; /* Lighter blue color */
-  font-size: 0.95em; /* Slightly smaller text */
-  transition: all 0.3s ease; /* Smooth transition for the effect */
+  color: #5A9BCF;
+  font-size: 0.95em;
+  transition: all 0.3s ease;
 }
 
   </style>
@@ -421,15 +421,15 @@
   <small>Est. 1992</small>
 </footer>
 
-<!-- Add sections here -->
+
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@1.16.1/dist/umd/popper.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 <script>
   document.getElementById('contactForm').addEventListener('submit', function(event) {
-    event.preventDefault(); // Prevent default form behavior
+    event.preventDefault();
     console.log('Form submitted, showing modal...');
-    $('#thankYouModal').modal('show'); // Show the modal
+    $('#thankYouModal').modal('show');
   });
 </script>
 </body>
